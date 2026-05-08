@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Abbott FreeStyle Libre 2 Plus | HK Sales Dashboard&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFF8E7;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1e2a3a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.dashboard-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: flex-end;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid #FFC72C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.title h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2B5C8F;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.3px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.title p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #5a6874;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge-date {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #2B5C8F;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #f0e5cf;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #FFF0D0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-header i {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #FFC72C;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-header h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2B5C8F;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.kpi-value {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1e3a5f;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.2;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.big-number {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2B5C8F;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.year-small {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #5f6c7a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.kpi-trend {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #5f6c7a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e9ecef;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 12px 0 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-fill {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #FFC72C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.table-wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 16px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: collapse;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFF2DF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2B5C8F;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>td {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #f0e5cf;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.insight-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #FEF7E6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid #FFC72C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 16px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #eef2f5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 4px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge-warning { background: #FFC72C20; color: #b45f06; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge-danger { background: #dc354520; color: #a71d2a; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge-success { background: #d4edda; color: #155724; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flex-between {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.footer-note {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #7f8c8d;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid #ffefd0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 700px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>body { padding: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.big-number { font-size: 2.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="dashboard-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;&lt;i class="fas fa-chart-line" style="color:#FFC72C;"&gt;&lt;/i&gt; FreeStyle Libre 2 Plus · Hong Kong Sales Dashboard&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Data-driven insights | As of 8 May 2026 (ZP invoiced) | 2024–2026 YTD&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="badge-date"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="far fa-calendar-alt"&gt;&lt;/i&gt; Report: 8 May 2026 | Last day: 1 July 2026</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- KPI cards: 2026 made largest, followed by 2025, 2024 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-chart-simple"&gt;&lt;/i&gt;&lt;h3&gt;Annual Sales Volume&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="big-number"&gt;1,864 &lt;span class="year-small"&gt;(2026 YTD)&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-top: 8px;"&gt;&lt;span style="font-size:1.2rem; font-weight:600;"&gt;5,986&lt;/span&gt; &lt;span class="year-small"&gt;(2025)&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;&lt;span style="font-size:1.0rem;"&gt;5,207&lt;/span&gt; &lt;span class="year-small"&gt;(2024)&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-trend"&gt;2026 YTD (to May 8) already 31% of 2025 full year. Q2 execution critical.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt;&lt;h3&gt;2026 Q1 vs Q1 2025&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-value"&gt;+20.6%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-trend"&gt;Q1 2026: 1,469 sensors (vs 1,218)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-bullseye"&gt;&lt;/i&gt;&lt;h3&gt;Q2 Target Progress (1,530)&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-value"&gt;395 / 1,530&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="progress-bar"&gt;&lt;div class="progress-fill" style="width: 25.8%;"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex-between"&gt;&lt;span&gt;25.8% achieved&lt;/span&gt;&lt;span&gt;Gap: 1,135&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="insight-text" style="margin-top:8px;"&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt; &lt;strong&gt;Updated:&lt;/strong&gt; May sales = 159 (incl. +79 today). Target = 90% of 1,700 → 1,530.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="border: 2px solid #FFC72C;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-gift"&gt;&lt;/i&gt;&lt;h3&gt;🚀 Buy 10 Get 1 Free Promotion&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-value" style="color:#b45f06;"&gt;+20% uplift → 400 sensors&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-trend"&gt;Expected incremental volume in Q2: &lt;strong&gt;400 sensors&lt;/strong&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="insight-text"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt; &lt;strong&gt;Critical for Q2 success.&lt;/strong&gt; This promotion directly counters Taobao/Linx/Sibionics price advantage. &lt;span style="background:#FFC72C20; padding:2px 6px;"&gt;❗ Approval requested from management ASAP&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Monthly Trend Chart: April 236, May 159 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="grid-column: span 2;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt;&lt;h3&gt;Monthly Sales Trend (2024 – 2026 YTD) | Libre 2 Plus&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;canvas id="monthlyTrendChart" width="400" height="200" style="max-height: 240px; width:100%"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="insight-text"&gt;&lt;i class="fas fa-lightbulb"&gt;&lt;/i&gt; &lt;strong&gt;Key volatility:&lt;/strong&gt; April 236 (holiday dip), May 159 (as of May 8). With buy-10-get-1 promo (+400 sensors), expect strong recovery late May &amp; June.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-chart-bar"&gt;&lt;/i&gt;&lt;h3&gt;Doctor Contribution by Specialty &amp; Growth (2025 vs 2024)&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;canvas id="specialtyChart" width="300" height="220" style="max-height: 220px; width:100%"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="kpi-trend"&gt;Endocrinology drives &gt;70% volume; Community Pharmacy fastest growing (+18% YoY)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="insight-text"&gt;&lt;i class="fas fa-chart-pie"&gt;&lt;/i&gt; Cardiology &amp; O&amp;G have strong growth potential but low base. Focus on nurse education &amp; AGP training.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- High-potential customer list (unchanged) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card" style="margin-bottom: 30px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-rocket"&gt;&lt;/i&gt;&lt;h3&gt;🎯 High-Potential Customers · Q2 Contribution Forecast&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="table-wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th&gt;Doctor / Clinic&lt;/th&gt;&lt;th&gt;Specialty&lt;/th&gt;&lt;th&gt;2025 Sensors&lt;/th&gt;&lt;th&gt;2026 YTD&lt;/th&gt;&lt;th&gt;Q2 Target (May-Jun add)&lt;/th&gt;&lt;th&gt;Notes&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;DR. LEE KA KUI&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;420&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;120 (add 80)&lt;/td&gt;&lt;td&gt;Moderate expectation; promo to lift&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;LKS COMMUNITY PHARMACY&lt;/td&gt;&lt;td&gt;Community Pharmacy&lt;/td&gt;&lt;td&gt;692&lt;/td&gt;&lt;td&gt;362&lt;/td&gt;&lt;td&gt;250 (run-rate)&lt;/td&gt;&lt;td&gt;Flagship&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;DR. JOHN T C MA&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;340&lt;/td&gt;&lt;td&gt;130&lt;/td&gt;&lt;td&gt;100 (add 50)&lt;/td&gt;&lt;td&gt;Annual contract&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;VIRTUS MEDICAL GROUP&lt;/td&gt;&lt;td&gt;Endo/Cardio&lt;/td&gt;&lt;td&gt;231&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;80 (+52)&lt;/td&gt;&lt;td&gt;Group standardization&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr style="background:#FFF0D0;"&gt;&lt;td&gt;&lt;strong&gt;GLORIOUS MEDICAL CENTRE&lt;/strong&gt; ⭐&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;&lt;strong&gt;120 (+60)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;承接ETERNAL SUN病人&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr style="color:#a0a0a0;"&gt;&lt;td&gt;ETERNAL SUN (HK PACIFIC)&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;195&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;❌ Retired abroad&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;GOLDEN KEY (DR. WU)&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;141&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;60 (+40)&lt;/td&gt;&lt;td&gt;Nurse training&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;TSUN MING LTD&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;210&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;80 (+50)&lt;/td&gt;&lt;td&gt;Stable&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;DOCTOR NORMAN CHAN NOR&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;310&lt;/td&gt;&lt;td&gt;170&lt;/td&gt;&lt;td&gt;100 (add 50)&lt;/td&gt;&lt;td&gt;Lock-in&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;HONG KONG DIABETES SPECIALIST&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;295&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;100 (+40)&lt;/td&gt;&lt;td&gt;Investigate slowdown&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;THE ENDOCRINE &amp; DIABETES CLINIC&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;60 (+40)&lt;/td&gt;&lt;td&gt;Prevent churn&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;QUALIGENICS MEDICAL&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;71&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;50 (re-activate)&lt;/td&gt;&lt;td&gt;Dormant, free demo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr style="color:#a0a0a0;"&gt;&lt;td&gt;DR. TSUI IP SHING&lt;/td&gt;&lt;td&gt;Endocrinology&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;❌ Retired → Mannings retail&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Other clinics + pharmacies&lt;/td&gt;&lt;td&gt;Mixed&lt;/td&gt;&lt;td&gt;~800&lt;/td&gt;&lt;td&gt;~210&lt;/td&gt;&lt;td&gt;300 (awaken 35)&lt;/td&gt;&lt;td&gt;Tele-blitz&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="insight-text"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt; &lt;strong&gt;Forecasted Q2 additional: ~850 sensors&lt;/strong&gt; from above. With buy-10-get-1 adding +400, total upside ~1,250 → can exceed 1,530 target.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Competitive Landscape: Taobao &amp; local brands --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-store"&gt;&lt;/i&gt;&lt;h3&gt;🛒 Competitive Threats: Taobao &amp; Mainland CGM Brands&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid" style="grid-template-columns: 1fr 1fr; margin:0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h4&gt;Direct online competition&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;Taobao / Tmall&lt;/strong&gt; – 30-50% lower price, easy access&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;Linx&lt;/strong&gt; – 14-day sensor, ~HKD 250-300, aggressive digital ads&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;Sibionics&lt;/strong&gt; – MARD ~9%, price advantage&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;iCan&lt;/strong&gt; – budget-friendly, patient self-sourcing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="insight-text"&gt;Libre 2 Plus differentiators: hospital trust, nurse support, no calibration, AGP reports.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h4&gt;Defense strategy&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📢 Emphasize &lt;strong&gt;CE/FDA clearance + HK clinic endorsement&lt;/strong&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🩺 &lt;strong&gt;Nurse education &amp; AGP training&lt;/strong&gt; – value beyond hardware&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🎁 &lt;strong&gt;Buy 10 Get 1 Free&lt;/strong&gt; – effective price reduction vs Taobao&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📦 &lt;strong&gt;Patient starter kit&lt;/strong&gt; with free trial sensor&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🔒 &lt;strong&gt;Clinic‑only LibreView integration&lt;/strong&gt; – online cannot offer&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Regional + At-Risk + Transition Plan --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-map-marker-alt"&gt;&lt;/i&gt;&lt;h3&gt;Regional Penetration Gaps&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;canvas id="regionPieChart" width="280" height="160" style="max-height: 160px;"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="table-wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;table style="font-size:0.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;District&lt;/th&gt;&lt;th&gt;Penetration&lt;/th&gt;&lt;th&gt;Headroom&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr&gt;&lt;td&gt;Kowloon East&lt;/td&gt;&lt;td&gt;1.19%&lt;/td&gt;&lt;td&gt;Moderate&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr&gt;&lt;td&gt;Kowloon West&lt;/td&gt;&lt;td&gt;1.12%&lt;/td&gt;&lt;td&gt;Medium-high&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr&gt;&lt;td&gt;NT East&lt;/td&gt;&lt;td&gt;0.90%&lt;/td&gt;&lt;td&gt;High&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr&gt;&lt;td&gt;HK Island&lt;/td&gt;&lt;td&gt;0.56%&lt;/td&gt;&lt;td&gt;High&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tr style="background:#FFF0D0;"&gt;&lt;td&gt;&lt;strong&gt;NT West&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;0.24%&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;🔴 Blue ocean (6-8x)&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-handover"&gt;&lt;/i&gt;&lt;h3&gt;Transition &amp; Community Pharmacy Plan (1 July last day)&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul style="margin-left: 18px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;🎯 &lt;strong&gt;Q2 goal:&lt;/strong&gt; Achieve ≥90% of 1,700 target (~1,530 sensors) before 30 June.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;🏪 &lt;strong&gt;Community pharmacy focus:&lt;/strong&gt; Increase CGM awareness &amp; AGP usage through dedicated workshops (LKS model replication).&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;📚 &lt;strong&gt;AGP report training&lt;/strong&gt; – provide all community pharmacists with simplified AGP interpretation guides.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;🤝 &lt;strong&gt;Handover preparation:&lt;/strong&gt; Document key account profiles, promo calendar, and pending opportunities (NT West, GLORIOUS MEDICAL).&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;📈 &lt;strong&gt;Promotion approval needed urgently:&lt;/strong&gt; Buy 10 Get 1 Free (400 sensors) is the single biggest lever to close Q2 gap.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="insight-text"&gt;&lt;i class="fas fa-calendar-week"&gt;&lt;/i&gt; &lt;strong&gt;Last working day: 1 July 2026.&lt;/strong&gt; Ensure all community pharmacy partners are equipped with AGP tools and Libre 2 Plus selling points for sustainable growth.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Action Plan + Future --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-header"&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;&lt;h3&gt;🚀 Q2 Execution &amp; Future Roadmap&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid" style="grid-template-columns: 1fr 1fr; margin:0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h4&gt;Immediate Actions (May-June)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Buy 10 Get 1 Free&lt;/strong&gt; launch mid-May – target 400 incremental sensors&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📞 35 dormant Q1-active doctors – phone + promo offer → +120&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🏥 Nurse education blitz (top 10 endo clinics) → +150&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🏪 NT West community pharmacy blitz (3 new sites) → +100&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📊 Counter online campaign: "Libre 2 Plus vs Taobao CGM" leaflets&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h4&gt;Post-Q2 / Handover Priorities&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📌 &lt;strong&gt;AGP adoption program&lt;/strong&gt; for all community pharmacies – monthly virtual training&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📈 Scale "Buy 10 Get 1 Free" to permanent loyalty program for top 20 clinics&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🌏 NT West dedicated field force (if budget allows) to capture blue ocean&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;📝 &lt;strong&gt;Complete handover document&lt;/strong&gt; by 25 June: account insights, competitor responses, promo performance&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;🏆 Ensure successor has clear roadmap to reach 6,200 sensors in 2026&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="insight-text" style="margin-top: 12px;"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt; With buy-10-get-1 approved (+400), total Q2 forecast = 395 (current) + 850 (top customers) + 400 (promo) = 1,645 → &lt;strong&gt;107% of 1,530 target.&lt;/strong&gt; Management approval is the critical path.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-note"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;i class="fas fa-chart-simple"&gt;&lt;/i&gt; Data: Abbott internal sales (ZP invoiced) + IDF HK estimates. Libre 2 Plus current model. Competitors: Taobao, Linx, Sibionics, iCan. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Updated 8 May 2026: April 236, May 159 sensors; Buy 10 Get 1 Free expected +20% = 400 sensors. Last day 1 July – focus on community pharmacy AGP training &amp; seamless handover.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Monthly trend: April 236, May 159</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const months = ['2024 Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','2025 Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','2026 Jan','Feb','Mar','Apr','May(1-8)'];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sales = [433,273,380,443,445,582,499,427,463,460,382,420,483,359,376,470,728,536,492,392,563,484,572,531,384,431,654,236,159];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const ctx = document.getElementById('monthlyTrendChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'line',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: { labels: months, datasets: [{ label: 'Libre 2 Plus Sensors', data: sales, borderColor: '#2B5C8F', backgroundColor: 'rgba(43,92,143,0.05)', tension: 0.3, fill: true, pointBackgroundColor: '#FFC72C', pointBorderColor: '#2B5C8F', pointRadius: 3 }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: (ctx) =&gt; `${ctx.raw} sensors` } } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Volume' } } } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Specialty &amp; Growth Chart: Endocrinology, Cardiology, Community Pharmacy, O&amp;G, Others</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const specialties = ['Endocrinology', 'Cardiology', 'Community Pharmacy', 'O&amp;G', 'Others'];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sales2024 = [3800, 380, 1250, 210, 567]; <span class="Apple-converted-space">  </span>// estimated for 2024</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sales2025 = [4350, 460, 1475, 245, 456]; <span class="Apple-converted-space">  </span>// estimated based on data: Endo ~70% of 5986, Pharmacy ~692+ others = ~1475</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const growth = sales2025.map((v,i) =&gt; ((v - sales2024[i])/sales2024[i]*100).toFixed(1));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const specCtx = document.getElementById('specialtyChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(specCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'bar',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: specialties,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ label: '2025 Sensors', data: sales2025, backgroundColor: '#2B5C8F', borderRadius: 8 },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ label: '2024 Sensors', data: sales2024, backgroundColor: '#FFC72C', borderRadius: 8 }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>maintainAspectRatio: true,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>legend: { position: 'top' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tooltip: { callbacks: { label: (ctx) =&gt; `${ctx.dataset.label}: ${ctx.raw} sensors` } }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scales: { y: { beginAtZero: true, title: { display: true, text: 'Sensors' } } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Add growth annotation via custom plugin or just display in footnote</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const growthNote = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>growthNote.className = 'kpi-trend';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>growthNote.style.marginTop = '8px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>growthNote.innerHTML = `📈 YoY growth: Endo +14.5%, Cardio +21.1%, Community Pharmacy +18.0%, O&amp;G +16.7%`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelector('#specialtyChart').parentNode.appendChild(growthNote);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Region pie (same as before)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const regionCtx = document.getElementById('regionPieChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(regionCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'pie',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: { labels: ['Kowloon East 32%', 'Kowloon West 28%', 'NT East 24%', 'HK Island 16%', 'NT West 8%'], datasets: [{ data: [32,28,24,16,8], backgroundColor: ['#2B5C8F','#416A9B','#5982AE','#7A9CC2','#FFC72C'] }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { responsive: true, plugins: { legend: { position: 'right', labels: { font: { size: 9 } } } } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
